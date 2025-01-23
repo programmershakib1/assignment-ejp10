@@ -11,7 +11,7 @@ const Navbar = async () => {
       <div>Logo</div>
       <div className="flex gap-5">
         <Link href="/">Home</Link>
-        <Link href="profile">Profile</Link>
+        <Link href="/profile">Profile</Link>
         {user ? (
           <Link href="/api/auth/logout">Logout</Link>
         ) : (
