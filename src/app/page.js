@@ -5,8 +5,8 @@ const Home = async () => {
   const data = await res.json();
 
   return (
-    <div className="my-10">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div className="my-16">
+      <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-5">
         {data.map((post, idx) => (
           <PostCard key={idx} post={post}></PostCard>
         ))}

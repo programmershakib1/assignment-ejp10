@@ -3,9 +3,9 @@ import Link from "next/link";
 const PostCard = ({ post }) => {
   const { id, title } = post;
   return (
-    <div className="border border-black rounded-md shadow-md h-40 flex justify-center items-center">
+    <div className="border rounded-xl shadow-lg h-52 flex justify-center items-center p-5">
       <Link href={`/blog/${id}`}>
-        <h2 className="text-xl font-bold text-center">{title}</h2>
+        <h2 className="font-bold text-center">{title}</h2>
       </Link>
     </div>
   );

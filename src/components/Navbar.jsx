@@ -8,14 +8,36 @@ const Navbar = async () => {
 
   return (
     <div className="flex justify-between items-center">
-      <div>Logo</div>
+      <div>
+        <h2 className="text-lg font-bold">Blog Post</h2>
+      </div>
       <div className="flex gap-5">
-        <Link href="/">Home</Link>
-        <Link href="/profile">Profile</Link>
+        <Link
+          className="border border-black py-1.5 px-4 rounded-md font-semibold"
+          href="/"
+        >
+          Home
+        </Link>
+        <Link
+          className="border border-black py-1.5 px-4 rounded-md font-semibold"
+          href="/profile"
+        >
+          Profile
+        </Link>
         {user ? (
-          <Link href="/api/auth/logout">Logout</Link>
+          <Link
+            className="border border-black py-1.5 px-4 rounded-md font-semibold"
+            href="/api/auth/logout"
+          >
+            Logout
+          </Link>
         ) : (
-          <Link href="/api/auth/login">Login</Link>
+          <Link
+            className="border border-black py-1.5 px-4 rounded-md font-semibold"
+            href="/api/auth/login"
+          >
+            Login
+          </Link>
         )}
       </div>
     </div>
