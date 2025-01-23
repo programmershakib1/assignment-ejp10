@@ -1,4 +1,9 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import {
+  RegisterLink,
+  LoginLink,
+  LogoutLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
 import Link from "next/link";
 
 const Navbar = async () => {
@@ -25,19 +30,17 @@ const Navbar = async () => {
           Profile
         </Link>
         {user ? (
-          <Link
-            className="border border-black py-1.5 px-4 rounded-md font-semibold"
-            href="/api/auth/logout"
-          >
-            Logout
-          </Link>
+          <LogoutLink>
+            <h2 className="border border-black py-1.5 px-4 rounded-md font-semibold">
+              Logout
+            </h2>
+          </LogoutLink>
         ) : (
-          <Link
-            className="border border-black py-1.5 px-4 rounded-md font-semibold"
-            href="/api/auth/login"
-          >
-            Login
-          </Link>
+          <LoginLink>
+            <h2 className="border border-black py-1.5 px-4 rounded-md font-semibold">
+              Login
+            </h2>
+          </LoginLink>
         )}
       </div>
     </div>
