@@ -1,3 +1,5 @@
+"use client";
+
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 
