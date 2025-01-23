@@ -5,6 +5,8 @@ const Profile = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
+  console.log(user);
+
   if (!user) {
     redirect("/api/auth/login");
   }
